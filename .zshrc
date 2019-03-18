@@ -5,7 +5,9 @@
 
 # download antigen if needed
 if [[ ! -a $HOME/antigen.zsh ]]; then
+    echo Antigen not found! Installing...
     curl -L git.io/antigen > $HOME/antigen.zsh
+    echo Antigen ready!
 fi
 
 # source antigen
