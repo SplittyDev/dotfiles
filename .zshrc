@@ -51,8 +51,19 @@ antigen bundle zsh-users/zsh-completions
 # fish-like autosuggestions
 antigen bundle zsh-users/zsh-autosuggestions
 
+# z.lua
+export _ZL_MATCH_MODE=1
+export _ZL_ROOT_MARKERS=".git,.svn,.hg,.root,package.json"
+antigen bundle skywind3000/z.lua
+alias zz='z -c' # restrict matches to subdirs of $PWD
+alias zi='z -i' # cd with interactive selection
+alias zb='z -b' # quickly cd to the parent directory
+
 # the best theme ever, period
 antigen theme half-life
 
 # magic
 antigen apply
+
+# aliases
+if type "bat" > /dev/null; then alias cat='bat'; fi
