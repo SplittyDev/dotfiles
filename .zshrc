@@ -33,6 +33,10 @@ antigen bundle rust
 antigen bundle cargo
 source $HOME/.cargo/env
 
+# container support
+antigen bundle docker
+antigen bundle vagrant
+
 # vim ctrl-z auto-unsuspend
 antigen bundle fancy-ctrl-z
 
